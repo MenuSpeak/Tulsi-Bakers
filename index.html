@@ -1350,645 +1350,637 @@
 
     <script>
         // Menu Data - Only items with multiple sizes have size selector
-        const data = [
-      { 
-        "id": 1, 
-        "cat": "NATURAL ICE CREAM", 
-        "name": "Sitafal (सिताफळ)", 
-        "price": "35/-", 
-        "desc": "Small: 35, Medium: 70, 1 Liter: 400", 
-        "tags": ["Veg"], 
-        "img": "img/sitafal.jpg",
-        "sizes": [
-          { "name": "Small", "price": 35 },
-          { "name": "Medium", "price": 70 },
-          { "name": "1 Liter", "price": 400 }
-        ]
-      },
-      { 
-        "id": 2, 
-        "cat": "NATURAL ICE CREAM", 
-        "name": "Chiku (चिक्कू)", 
-        "price": "30/-", 
-        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
-        "tags": ["Veg"], 
-        "img": "img/chiku.jpg",
-        "sizes": [
-          { "name": "Small", "price": 30 },
-          { "name": "Medium", "price": 60 },
-          { "name": "1 Liter", "price": 350 }
-        ]
-      },
-      { 
-        "id": 3, 
-        "cat": "NATURAL ICE CREAM", 
-        "name": "Strawberry (स्ट्रॉबेरी)", 
-        "price": "30/-", 
-        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
-        "tags": ["Veg"], 
-        "img": "img/strawberry.jpg",
-        "sizes": [
-          { "name": "Small", "price": 30 },
-          { "name": "Medium", "price": 60 },
-          { "name": "1 Liter", "price": 350 }
-        ]
-      },
-      { 
-        "id": 4, 
-        "cat": "NATURAL ICE CREAM", 
-        "name": "Mango (मँगो)", 
-        "price": "30/-", 
-        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
-        "tags": ["Veg"], 
-        "img": "img/mango.jpg",
-        "sizes": [
-          { "name": "Small", "price": 30 },
-          { "name": "Medium", "price": 60 },
-          { "name": "1 Liter", "price": 350 }
-        ]
-      },
-      { 
-        "id": 5, 
-        "cat": "NATURAL ICE CREAM", 
-        "name": "Peru (पेरू)", 
-        "price": "30/-", 
-        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
-        "tags": ["Veg"], 
-        "img": "img/peru.jpg",
-        "sizes": [
-          { "name": "Small", "price": 30 },
-          { "name": "Medium", "price": 60 },
-          { "name": "1 Liter", "price": 350 }
-        ]
-      },
-      { 
-        "id": 6, 
-        "cat": "NATURAL ICE CREAM", 
-        "name": "Pineapple (पायनॅपल)", 
-        "price": "30/-", 
-        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
-        "tags": ["Veg"], 
-        "img": "img/pineapple.jpg",
-        "sizes": [
-          { "name": "Small", "price": 30 },
-          { "name": "Medium", "price": 60 },
-          { "name": "1 Liter", "price": 350 }
-        ]
-      },
-      { 
-        "id": 7, 
-        "cat": "NATURAL ICE CREAM", 
-        "name": "Rajwadi (राजवाडी)", 
-        "price": "35/-", 
-        "desc": "Small: 35, Medium: 70, 1 Liter: 400", 
-        "tags": ["Veg"], 
-        "img": "img/rajwadi.jpg",
-        "sizes": [
-          { "name": "Small", "price": 35 },
-          { "name": "Medium", "price": 70 },
-          { "name": "1 Liter", "price": 400 }
-        ]
-      },
-      { 
-        "id": 8, 
-        "cat": "NATURAL ICE CREAM", 
-        "name": "Anjir (अंजीर)", 
-        "price": "30/-", 
-        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
-        "tags": ["Veg"], 
-        "img": "img/anjir.jpg",
-        "sizes": [
-          { "name": "Small", "price": 30 },
-          { "name": "Medium", "price": 60 },
-          { "name": "1 Liter", "price": 350 }
-        ]
-      },
-      { 
-        "id": 9, 
-        "cat": "NATURAL ICE CREAM", 
-        "name": "Chocolate (चॉकलेट)", 
-        "price": "30/-", 
-        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
-        "tags": ["Veg"], 
-        "img": "img/chocolate.jpg",
-        "sizes": [
-          { "name": "Small", "price": 30 },
-          { "name": "Medium", "price": 60 },
-          { "name": "1 Liter", "price": 350 }
-        ]
-      },
-      // Simple items without sizes (Mojito, Milkshake, Coffee, etc.)
-      { "id": 10, "cat": "MOJITO", "name": "Blue Logan Mojito", "price": "50/-", "desc": "Refreshing Blue Logan flavor", "tags": ["Veg"], "img": "img/blue_logan.jpg" },
-      { "id": 11, "cat": "MOJITO", "name": "Karvanda Mojito", "price": "50/-", "desc": "Refreshing Karvanda flavor", "tags": ["Veg"], "img": "img/karvanda.jpg" },
-      { "id": 12, "cat": "MOJITO", "name": "Peru Gulabi Mojito", "price": "50/-", "desc": "Pink Guava flavor", "tags": ["Veg"], "img": "img/peru_gulabi.jpg" },
-      { "id": 13, "cat": "MOJITO", "name": "Mango Mojito", "price": "50/-", "desc": "Sweet Mango flavor", "tags": ["Veg"], "img": "img/mango_mojito.jpg" },
-      { "id": 14, "cat": "MOJITO", "name": "Kacchi Kairi Mojito", "price": "50/-", "desc": "Tangy Raw Mango flavor", "tags": ["Veg"], "img": "img/kacchi_kairi.jpg" },
-      { "id": 15, "cat": "MOJITO", "name": "Fresh Lime Soda", "price": "40/-", "desc": "Classic Lime Soda", "tags": ["Veg"], "img": "img/fresh_lime.jpg" },
-      { "id": 16, "cat": "MOJITO", "name": "Strawberry Mojito", "price": "50/-", "desc": "Berry fresh flavor", "tags": ["Veg"], "img": "img/strawberry_mojito.jpg" },
-      { "id": 17, "cat": "MOJITO", "name": "Blueberry Mojito", "price": "50/-", "desc": "Rich Blueberry flavor", "tags": ["Veg"], "img": "img/blueberry_mojito.jpg" },
-      { "id": 18, "cat": "MOJITO", "name": "Pineapple Mojito", "price": "50/-", "desc": "Tropical Pineapple flavor", "tags": ["Veg"], "img": "img/pineapple_mojito.jpg" },
-      { "id": 19, "cat": "MILKSHAKE", "name": "Mango Milkshake", "price": "60/-", "desc": "Thick Mango Shake", "tags": ["Veg"], "img": "img/mango_shake.jpg" },
-      { "id": 20, "cat": "MILKSHAKE", "name": "Rose Milkshake", "price": "60/-", "desc": "Sweet Rose Shake", "tags": ["Veg"], "img": "img/rose_shake.jpg" },
-      { "id": 21, "cat": "MILKSHAKE", "name": "Strawberry Milkshake", "price": "60/-", "desc": "Fresh Strawberry Shake", "tags": ["Veg"], "img": "img/strawberry_shake.jpg" },
-      { "id": 22, "cat": "MILKSHAKE", "name": "Pineapple Milkshake", "price": "60/-", "desc": "Pineapple Shake", "tags": ["Veg"], "img": "img/pineapple_shake.jpg" },
-      { "id": 23, "cat": "MILKSHAKE", "name": "Chocolate Milkshake", "price": "60/-", "desc": "Rich Chocolate Shake", "tags": ["Veg"], "img": "img/chocolate_shake.jpg" },
-      { "id": 24, "cat": "COFFEE", "name": "Cold Coffee (कोल्ड कॉफी)", "price": "60/-", "desc": "Creamy Cold Coffee", "tags": ["Veg"], "img": "img/cold_coffee.jpg" },
-      { "id": 25, "cat": "DESSERT", "name": "Brownie (ब्राउनी)", "price": "50/-", "desc": "Chocolate Brownie", "tags": ["Veg"], "img": "img/brownie.jpg" },
-      { "id": 26, "cat": "DESSERT", "name": "Chocolate Dessert Bowl", "price": "100/-", "desc": "Loaded Dessert Bowl", "tags": ["Veg"], "img": "img/choco_bowl.jpg" },
-      
-      // Ice Cream Plane with sizes
-      { 
-        "id": 27, 
-        "cat": "ICE CREAM PLANE", 
-        "name": "Vanilla (व्हॅनिला)", 
-        "price": "20/-", 
-        "desc": "Small: 20, Medium: 40, Live: 30", 
-        "tags": ["Veg"], 
-        "img": "img/vanilla.jpg",
-        "sizes": [
-          { "name": "Small", "price": 20 },
-          { "name": "Medium", "price": 40 },
-          { "name": "Live", "price": 30 },
-          { "name": "Ltr", "price": 250 },
-                 
-        ]
-      },
-      { 
-        "id": 28, 
-        "cat": "ICE CREAM PLANE", 
-        "name": "Mango (मँगो)", 
-        "price": "20/-", 
-        "desc": "Small: 20, Medium: 40, Live: 30", 
-        "tags": ["Veg"], 
-        "img": "img/mango_plane.jpg",
-        "sizes": [
-          { "name": "Small", "price": 20 },
-          { "name": "Medium", "price": 40 },
-          { "name": "Live", "price": 30 },
-          { "name": "Ltr", "price": 250 },
-        ]
-      },
-      { 
-        "id": 29, 
-        "cat": "ICE CREAM PLANE", 
-        "name": "Strawberry (स्ट्रॉबेरी)", 
-        "price": "20/-", 
-        "desc": "Small: 20, Medium: 40, Live: 30", 
-        "tags": ["Veg"], 
-        "img": "img/strawberry_plane.jpg",
-        "sizes": [
-          { "name": "Small", "price": 20 },
-          { "name": "Medium", "price": 40 },
-          { "name": "Live", "price": 30 },
-          { "name": "Ltr", "price": 250 },
-        ]
-      },
-      { 
-        "id": 30, 
-        "cat": "ICE CREAM PLANE", 
-        "name": "Pista (पस्ता)", 
-        "price": "20/-", 
-        "desc": "Small: 20, Medium: 40, Live: 30", 
-        "tags": ["Veg"], 
-        "img": "img/pista.jpg",
-        "sizes": [
-          { "name": "Small", "price": 20 },
-          { "name": "Medium", "price": 40 },
-          { "name": "Live", "price": 30 },
-              { "name": "Ltr", "price": 250 },
-        ]
-      },
-      { 
-        "id": 31, 
-        "cat": "ICE CREAM PLANE", 
-        "name": "Butterscotch (बटरस्कॉच)", 
-        "price": "20/-", 
-        "desc": "Small: 20, Medium: 40", 
-        "tags": ["Veg"], 
-        "img": "img/butterscotch.jpg",
-        "sizes": [
-          { "name": "Small", "price": 20 },
-          { "name": "Medium", "price": 40 },
-               { "name": "Live", "price": 30 },
-              { "name": "Ltr", "price": 250 },
-        ]
-      },
-      { 
-        "id": 32, 
-        "cat": "ICE CREAM PLANE", 
-        "name": "Pineapple (पायनॅपल)", 
-        "price": "20/-", 
-        "desc": "Small: 20, Medium: 40, Live: 30", 
-        "tags": ["Veg"], 
-        "img": "img/pineapple_plane.jpg",
-        "sizes": [
-          { "name": "Small", "price": 20 },
-          { "name": "Medium", "price": 40 },
-          { "name": "Live", "price": 30 },
-              { "name": "Ltr", "price": 250 },
-        ]
-      },
-      { 
-        "id": 33, 
-        "cat": "ICE CREAM PLANE", 
-        "name": "Peru (पेरू)", 
-        "price": "20/-", 
-        "desc": "Small: 20, Medium: 40, Live: 30", 
-        "tags": ["Veg"], 
-        "img": "img/peru_plane.jpg",
-        "sizes": [
-          { "name": "Small", "price": 20 },
-          { "name": "Medium", "price": 40 },
-          { "name": "Live", "price": 30 },
-              { "name": "Ltr", "price": 250 },
-        ]
-      },
-      { 
-        "id": 34, 
-        "cat": "ICE CREAM PLANE", 
-        "name": "Gulkand (गुलकंद)", 
-        "price": "20/-", 
-        "desc": "Small: 20, Medium: 40", 
-        "tags": ["Veg"], 
-        "img": "img/gulkand.jpg",
-        "sizes": [
-          { "name": "Small", "price": 20 },
-          { "name": "Medium", "price": 40 },
-              { "name": "Live", "price": 30 },
-              { "name": "Ltr", "price": 250 },
-        ]
-      },
-      { 
-        "id": 35, 
-        "cat": "ICE CREAM PLANE", 
-        "name": "American Dryfruit (अमेरिकन ड्रायफ्रुट)", 
-        "price": "20/-", 
-        "desc": "Small: 20, Medium: 40", 
-        "tags": ["Veg"], 
-        "img": "img/american_dryfruit.jpg",
-        "sizes": [
-          { "name": "Small", "price": 20 },
-          { "name": "Medium", "price": 40 },
-              { "name": "Live", "price": 30 },
-              { "name": "Ltr", "price": 250 },
-        ]
-      },
-      { 
-        "id": 36, 
-        "cat": "ICE CREAM PLANE", 
-        "name": "Chocolate (चॉकलेट)", 
-        "price": "20/-", 
-        "desc": "Small: 20, Medium: 40, Live: 30", 
-        "tags": ["Veg"], 
-        "img": "img/chocolate_plane.jpg",
-        "sizes": [
-          { "name": "Small", "price": 20 },
-          { "name": "Medium", "price": 40 },
-          { "name": "Live", "price": 30 }
-              { "name": "Ltr", "price": 250 },
-        ]
-      },
-      
-      // COOKIES with sizes
-      { 
-        "id": 37, 
-        "cat": "COOKIES", 
-        "name": "Gavrani Tupache Cookies (गवराणी तुपाचे कुकीज)", 
-        "price": "400/- per kg", 
-        "desc": "Traditional ghee cookies - With Dryfruit: 450/- per kg", 
-        "tags": ["Veg"], 
-        "img": "img/gavrani_tupache_cookies.jpg",
-        "sizes": [
-          { "name": "Regular (1kg)", "price": 400 },
-          { "name": "With Dryfruit (1kg)", "price": 450 },
-        ]
-      },
-      { 
-        "id": 38, 
-        "cat": "COOKIES", 
-        "name": "Kanik Buiscuit (कणिक बिस्किट)", 
-        "price": "160/- per kg", 
-        "desc": "Classic flour biscuits", 
-        "tags": ["Veg"], 
-        "img": "img/kanik_buiscuit.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 40 },
-          { "name": "500gm", "price": 80 },
-          { "name": "1kg", "price": 160 },
-        ]
-      },
-      { 
-        "id": 39, 
-        "cat": "COOKIES", 
-        "name": "Nagli Buiscuit (नागली बिस्किट)", 
-        "price": "200/- per kg", 
-        "desc": "Healthy ragi biscuits", 
-        "tags": ["Veg"], 
-        "img": "img/nagli_buiscuit.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 50 },
-          { "name": "500gm", "price": 100 },
-          { "name": "1kg", "price": 200 },
-        ]
-      },
-      { 
-        "id": 40, 
-        "cat": "COOKIES", 
-        "name": "Coconut Cookies (कोकोनट कुकीज)", 
-        "price": "200/- per kg", 
-        "desc": "Delicious coconut flavored cookies", 
-        "tags": ["Veg"], 
-        "img": "img/coconut_cookies.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 50 },
-          { "name": "500gm", "price": 100 },
-          { "name": "1kg", "price": 200 },
-        ]
-      },
-      { 
-        "id": 41, 
-        "cat": "COOKIES", 
-        "name": "Chocolate Cookies (चॉकलेट कुकीज)", 
-        "price": "260/- per kg", 
-        "desc": "Rich chocolate cookies", 
-        "tags": ["Veg"], 
-        "img": "img/chocolate_cookies.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 65 },
-          { "name": "500gm", "price": 130 },
-          { "name": "1kg", "price": 260 },
-        ]
-      },
-      { 
-        "id": 42, 
-        "cat": "COOKIES", 
-        "name": "Nutfruit Cookies (नटफ्रूट कुकीज)", 
-        "price": "280/- per kg", 
-        "desc": "Cookies with nuts and dry fruits", 
-        "tags": ["Veg"], 
-        "img": "img/nutfruit_cookies.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 70 },
-          { "name": "500gm", "price": 140 },
-          { "name": "1kg", "price": 280 },
-        ]
-      },
-      { 
-        "id": 43, 
-        "cat": "COOKIES", 
-        "name": "Basundi Cookies (बासुंदी कुकीज)", 
-        "price": "280/- per kg", 
-        "desc": "Basundi flavored sweet cookies", 
-        "tags": ["Veg"], 
-        "img": "img/basundi_cookies.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 70 },
-          { "name": "500gm", "price": 140 },
-          { "name": "1kg", "price": 280 },
-        ]
-      },
-      { 
-        "id": 44, 
-        "cat": "COOKIES", 
-        "name": "Honey Almond Cookies (हनी अल्मंड कुकीज)", 
-        "price": "280/- per kg", 
-        "desc": "Honey and almond cookies", 
-        "tags": ["Veg"], 
-        "img": "img/honey_almond_cookies.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 70 },
-          { "name": "500gm", "price": 140 },
-          { "name": "1kg", "price": 280 },
-        ]
-      },
-      
-      // CAKES with sizes
-      { 
-        "id": 50, 
-        "cat": "CAKE", 
-        "name": "Black Forest Cake (ब्लैक फॉरेस्ट केक)", 
-        "price": "150/-", 
-        "desc": "Classic chocolate cake with cherry and cream", 
-        "tags": ["Veg"], 
-        "img": "img/black_forest_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 150 },
-          { "name": "500gm", "price": 250 },
-          { "name": "1Kg", "price": 500 },
-        ]
-      },
-      { 
-        "id": 51, 
-        "cat": "CAKE", 
-        "name": "Chocolate Cake (चॉकलेट केक)", 
-        "price": "150/-", 
-        "desc": "Rich and moist chocolate cake", 
-        "tags": ["Veg"], 
-        "img": "img/chocolate_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 150 },
-          { "name": "500gm", "price": 250 },
-          { "name": "1Kg", "price": 500 },
-        ]
-      },
-      { 
-        "id": 52, 
-        "cat": "CAKE", 
-        "name": "Pan Cake (पैन केक)", 
-        "price": "150/-", 
-        "desc": "Soft and fluffy pan cake", 
-        "tags": ["Veg"], 
-        "img": "img/pan_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 150 },
-          { "name": "500gm", "price": 250 },
-          { "name": "1Kg", "price": 500 },
-        ]
-      },
-      { 
-        "id": 53, 
-        "cat": "CAKE", 
-        "name": "Strawberry Cake (स्ट्रॉबेरी केक)", 
-        "price": "150/-", 
-        "desc": "Delicious strawberry flavored cake", 
-        "tags": ["Veg"], 
-        "img": "img/strawberry_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 150 },
-          { "name": "500gm", "price": 250 },
-          { "name": "1Kg", "price": 500 },
-        ]
-      },
-      { 
-        "id": 54, 
-        "cat": "CAKE", 
-        "name": "Pineapple Cake (पाइनएप्पल केक)", 
-        "price": "150/-", 
-        "desc": "Refreshing pineapple cake", 
-        "tags": ["Veg"], 
-        "img": "img/pineapple_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 150 },
-          { "name": "500gm", "price": 250 },
-          { "name": "1Kg", "price": 500 },
-        ]
-      },
-      { 
-        "id": 55, 
-        "cat": "CAKE", 
-        "name": "Butterscotch Cake (बटरस्कॉच केक)", 
-        "price": "150/-", 
-        "desc": "Crunchy butterscotch cake", 
-        "tags": ["Veg"], 
-        "img": "img/butterscotch_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 150 },
-          { "name": "500gm", "price": 250 },
-          { "name": "1Kg", "price": 500 },
-        ]
-      },
-      { 
-        "id": 56, 
-        "cat": "CAKE", 
-        "name": "Blueberry Cake (ब्लूबेरी केक)", 
-        "price": "150/-", 
-        "desc": "Tangy blueberry flavored cake", 
-        "tags": ["Veg"], 
-        "img": "img/blueberry_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 150 },
-          { "name": "500gm", "price": 250 },
-          { "name": "1Kg", "price": 500 },
-        ]
-      },
-      { 
-        "id": 57, 
-        "cat": "CAKE", 
-        "name": "Gulkand Badam Cake (गुलकंद बादाम केक)", 
-        "price": "150/-", 
-        "desc": "Unique gulkand and almond cake", 
-        "tags": ["Veg"], 
-        "img": "img/gulkand_badam_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 150 },
-          { "name": "500gm", "price": 250 },
-          { "name": "1Kg", "price": 500 },
-        ]
-      },
-      { 
-        "id": 58, 
-        "cat": "CAKE", 
-        "name": "Red Rose Cake (रेड रोज़ केक)", 
-        "price": "150/-", 
-        "desc": "Rose flavored red velvet cake", 
-        "tags": ["Veg"], 
-        "img": "img/red_rose_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 150 },
-          { "name": "500gm", "price": 250 },
-          { "name": "1Kg", "price": 500 },
-        ]
-      },
-      { 
-        "id": 59, 
-        "cat": "CAKE", 
-        "name": "White Forest Cake (व्हाइट फॉरेस्ट केक)", 
-        "price": "150/-", 
-        "desc": "Creamy white forest cake", 
-        "tags": ["Veg"], 
-        "img": "img/white_forest_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 150 },
-          { "name": "500gm", "price": 250 },
-          { "name": "1Kg", "price": 500 },
-        ]
-      },
-      { 
-        "id": 60, 
-        "cat": "CAKE", 
-        "name": "Kasata Cake (कसाटा केक)", 
-        "price": "150/-", 
-        "desc": "Delicious kasata cake", 
-        "tags": ["Veg"], 
-        "img": "img/kasata_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 150 },
-          { "name": "500gm", "price": 250 },
-          { "name": "1Kg", "price": 600 },
-        ]
-      },
-      { 
-        "id": 61, 
-        "cat": "CAKE", 
-        "name": "Red Velvet Cake (रेड वेल्वेट केक)", 
-        "price": "170/-", 
-        "desc": "Classic red velvet with cream cheese", 
-        "tags": ["Veg"], 
-        "img": "img/red_velvet_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 170 },
-          { "name": "500gm", "price": 300 },
-          { "name": "1Kg", "price": 600 },
-        ]
-      },
-      { 
-        "id": 62, 
-        "cat": "CAKE", 
-        "name": "Green Velvet Cake (ग्रीन वेल्वेट केक)", 
-        "price": "170/-", 
-        "desc": "Green colored velvet cake", 
-        "tags": ["Veg"], 
-        "img": "img/green_velvet_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 170 },
-          { "name": "500gm", "price": 300 },
-          { "name": "1Kg", "price": 600 },
-        ]
-      },
-      { 
-        "id": 63, 
-        "cat": "CAKE", 
-        "name": "Chocolate Truffle Cake (चॉकलेट ट्रफल केक)", 
-        "price": "200/-", 
-        "desc": "Rich chocolate truffle cake", 
-        "tags": ["Veg"], 
-        "img": "img/chocolate_truffle_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 200 },
-          { "name": "500gm", "price": 350 },
-          { "name": "1Kg", "price": 700 },
-        ]
-      },
-      { 
-        "id": 64, 
-        "cat": "CAKE", 
-        "name": "Mawa Malai Cake (मावा मलाई केक)", 
-        "price": "200/-", 
-        "desc": "Traditional mawa malai flavored cake", 
-        "tags": ["Veg"], 
-        "img": "img/mawa_malai_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 200 },
-          { "name": "500gm", "price": 350 },
-          { "name": "1Kg", "price": 700 },
-        ]
-      },
-      { 
-        "id": 65, 
-        "cat": "CAKE", 
-        "name": "Rasmalai Cake (रसमलाई केक)", 
-        "price": "200/-", 
-        "desc": "Rasmalai flavored creamy cake", 
-        "tags": ["Veg"], 
-        "img": "img/rasmalai_cake.jpg",
-        "sizes": [
-          { "name": "250gm", "price": 200 },
-          { "name": "500gm", "price": 350 },
-          { "name": "1Kg", "price": 700 },
-        ]
-      }
-    ];
-        
+        const data = 
+        [
+  { 
+    "id": 1, 
+    "cat": "NATURAL ICE CREAM", 
+    "name": "Sitafal (सिताफळ)", 
+    "price": "35/-", 
+    "desc": "Small: 35, Medium: 70, 1 Liter: 400", 
+    "tags": ["Veg"], 
+    "img": "img/sitafal.jpg",
+    "sizes": [
+      { "name": "Small", "price": 35 },
+      { "name": "Medium", "price": 70 },
+      { "name": "1 Liter", "price": 400 }
+    ]
+  },
+  { 
+    "id": 2, 
+    "cat": "NATURAL ICE CREAM", 
+    "name": "Chiku (चिक्कू)", 
+    "price": "30/-", 
+    "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+    "tags": ["Veg"], 
+    "img": "img/chiku.jpg",
+    "sizes": [
+      { "name": "Small", "price": 30 },
+      { "name": "Medium", "price": 60 },
+      { "name": "1 Liter", "price": 350 }
+    ]
+  },
+  { 
+    "id": 3, 
+    "cat": "NATURAL ICE CREAM", 
+    "name": "Strawberry (स्ट्रॉबेरी)", 
+    "price": "30/-", 
+    "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+    "tags": ["Veg"], 
+    "img": "img/strawberry.jpg",
+    "sizes": [
+      { "name": "Small", "price": 30 },
+      { "name": "Medium", "price": 60 },
+      { "name": "1 Liter", "price": 350 }
+    ]
+  },
+  { 
+    "id": 4, 
+    "cat": "NATURAL ICE CREAM", 
+    "name": "Mango (मँगो)", 
+    "price": "30/-", 
+    "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+    "tags": ["Veg"], 
+    "img": "img/mango.jpg",
+    "sizes": [
+      { "name": "Small", "price": 30 },
+      { "name": "Medium", "price": 60 },
+      { "name": "1 Liter", "price": 350 }
+    ]
+  },
+  { 
+    "id": 5, 
+    "cat": "NATURAL ICE CREAM", 
+    "name": "Peru (पेरू)", 
+    "price": "30/-", 
+    "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+    "tags": ["Veg"], 
+    "img": "img/peru.jpg",
+    "sizes": [
+      { "name": "Small", "price": 30 },
+      { "name": "Medium", "price": 60 },
+      { "name": "1 Liter", "price": 350 }
+    ]
+  },
+  { 
+    "id": 6, 
+    "cat": "NATURAL ICE CREAM", 
+    "name": "Pineapple (पायनॅपल)", 
+    "price": "30/-", 
+    "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+    "tags": ["Veg"], 
+    "img": "img/pineapple.jpg",
+    "sizes": [
+      { "name": "Small", "price": 30 },
+      { "name": "Medium", "price": 60 },
+      { "name": "1 Liter", "price": 350 }
+    ]
+  },
+  { 
+    "id": 7, 
+    "cat": "NATURAL ICE CREAM", 
+    "name": "Rajwadi (राजवाडी)", 
+    "price": "35/-", 
+    "desc": "Small: 35, Medium: 70, 1 Liter: 400", 
+    "tags": ["Veg"], 
+    "img": "img/rajwadi.jpg",
+    "sizes": [
+      { "name": "Small", "price": 35 },
+      { "name": "Medium", "price": 70 },
+      { "name": "1 Liter", "price": 400 }
+    ]
+  },
+  { 
+    "id": 8, 
+    "cat": "NATURAL ICE CREAM", 
+    "name": "Anjir (अंजीर)", 
+    "price": "30/-", 
+    "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+    "tags": ["Veg"], 
+    "img": "img/anjir.jpg",
+    "sizes": [
+      { "name": "Small", "price": 30 },
+      { "name": "Medium", "price": 60 },
+      { "name": "1 Liter", "price": 350 }
+    ]
+  },
+  { 
+    "id": 9, 
+    "cat": "NATURAL ICE CREAM", 
+    "name": "Chocolate (चॉकलेट)", 
+    "price": "30/-", 
+    "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+    "tags": ["Veg"], 
+    "img": "img/chocolate.jpg",
+    "sizes": [
+      { "name": "Small", "price": 30 },
+      { "name": "Medium", "price": 60 },
+      { "name": "1 Liter", "price": 350 }
+    ]
+  },
+  { "id": 10, "cat": "MOJITO", "name": "Blue Logan Mojito", "price": "50/-", "desc": "Refreshing Blue Logan flavor", "tags": ["Veg"], "img": "img/blue_logan.jpg" },
+  { "id": 11, "cat": "MOJITO", "name": "Karvanda Mojito", "price": "50/-", "desc": "Refreshing Karvanda flavor", "tags": ["Veg"], "img": "img/karvanda.jpg" },
+  { "id": 12, "cat": "MOJITO", "name": "Peru Gulabi Mojito", "price": "50/-", "desc": "Pink Guava flavor", "tags": ["Veg"], "img": "img/peru_gulabi.jpg" },
+  { "id": 13, "cat": "MOJITO", "name": "Mango Mojito", "price": "50/-", "desc": "Sweet Mango flavor", "tags": ["Veg"], "img": "img/mango_mojito.jpg" },
+  { "id": 14, "cat": "MOJITO", "name": "Kacchi Kairi Mojito", "price": "50/-", "desc": "Tangy Raw Mango flavor", "tags": ["Veg"], "img": "img/kacchi_kairi.jpg" },
+  { "id": 15, "cat": "MOJITO", "name": "Fresh Lime Soda", "price": "40/-", "desc": "Classic Lime Soda", "tags": ["Veg"], "img": "img/fresh_lime.jpg" },
+  { "id": 16, "cat": "MOJITO", "name": "Strawberry Mojito", "price": "50/-", "desc": "Berry fresh flavor", "tags": ["Veg"], "img": "img/strawberry_mojito.jpg" },
+  { "id": 17, "cat": "MOJITO", "name": "Blueberry Mojito", "price": "50/-", "desc": "Rich Blueberry flavor", "tags": ["Veg"], "img": "img/blueberry_mojito.jpg" },
+  { "id": 18, "cat": "MOJITO", "name": "Pineapple Mojito", "price": "50/-", "desc": "Tropical Pineapple flavor", "tags": ["Veg"], "img": "img/pineapple_mojito.jpg" },
+  { "id": 19, "cat": "MILKSHAKE", "name": "Mango Milkshake", "price": "60/-", "desc": "Thick Mango Shake", "tags": ["Veg"], "img": "img/mango_shake.jpg" },
+  { "id": 20, "cat": "MILKSHAKE", "name": "Rose Milkshake", "price": "60/-", "desc": "Sweet Rose Shake", "tags": ["Veg"], "img": "img/rose_shake.jpg" },
+  { "id": 21, "cat": "MILKSHAKE", "name": "Strawberry Milkshake", "price": "60/-", "desc": "Fresh Strawberry Shake", "tags": ["Veg"], "img": "img/strawberry_shake.jpg" },
+  { "id": 22, "cat": "MILKSHAKE", "name": "Pineapple Milkshake", "price": "60/-", "desc": "Pineapple Shake", "tags": ["Veg"], "img": "img/pineapple_shake.jpg" },
+  { "id": 23, "cat": "MILKSHAKE", "name": "Chocolate Milkshake", "price": "60/-", "desc": "Rich Chocolate Shake", "tags": ["Veg"], "img": "img/chocolate_shake.jpg" },
+  { "id": 24, "cat": "COFFEE", "name": "Cold Coffee (कोल्ड कॉफी)", "price": "60/-", "desc": "Creamy Cold Coffee", "tags": ["Veg"], "img": "img/cold_coffee.jpg" },
+  { "id": 25, "cat": "DESSERT", "name": "Brownie (ब्राउनी)", "price": "50/-", "desc": "Chocolate Brownie", "tags": ["Veg"], "img": "img/brownie.jpg" },
+  { "id": 26, "cat": "DESSERT", "name": "Chocolate Dessert Bowl", "price": "100/-", "desc": "Loaded Dessert Bowl", "tags": ["Veg"], "img": "img/choco_bowl.jpg" },
+  { 
+    "id": 27, 
+    "cat": "ICE CREAM PLANE", 
+    "name": "Vanilla (व्हॅनिला)", 
+    "price": "20/-", 
+    "desc": "Small: 20, Medium: 40, Live: 30", 
+    "tags": ["Veg"], 
+    "img": "img/vanilla.jpg",
+    "sizes": [
+      { "name": "Small", "price": 20 },
+      { "name": "Medium", "price": 40 },
+      { "name": "Live", "price": 30 },
+      { "name": "Ltr", "price": 250 }
+    ]
+  },
+  { 
+    "id": 28, 
+    "cat": "ICE CREAM PLANE", 
+    "name": "Mango (मँगो)", 
+    "price": "20/-", 
+    "desc": "Small: 20, Medium: 40, Live: 30", 
+    "tags": ["Veg"], 
+    "img": "img/mango_plane.jpg",
+    "sizes": [
+      { "name": "Small", "price": 20 },
+      { "name": "Medium", "price": 40 },
+      { "name": "Live", "price": 30 },
+      { "name": "Ltr", "price": 250 }
+    ]
+  },
+  { 
+    "id": 29, 
+    "cat": "ICE CREAM PLANE", 
+    "name": "Strawberry (स्ट्रॉबेरी)", 
+    "price": "20/-", 
+    "desc": "Small: 20, Medium: 40, Live: 30", 
+    "tags": ["Veg"], 
+    "img": "img/strawberry_plane.jpg",
+    "sizes": [
+      { "name": "Small", "price": 20 },
+      { "name": "Medium", "price": 40 },
+      { "name": "Live", "price": 30 },
+      { "name": "Ltr", "price": 250 }
+    ]
+  },
+  { 
+    "id": 30, 
+    "cat": "ICE CREAM PLANE", 
+    "name": "Pista (पस्ता)", 
+    "price": "20/-", 
+    "desc": "Small: 20, Medium: 40, Live: 30", 
+    "tags": ["Veg"], 
+    "img": "img/pista.jpg",
+    "sizes": [
+      { "name": "Small", "price": 20 },
+      { "name": "Medium", "price": 40 },
+      { "name": "Live", "price": 30 },
+      { "name": "Ltr", "price": 250 }
+    ]
+  },
+  { 
+    "id": 31, 
+    "cat": "ICE CREAM PLANE", 
+    "name": "Butterscotch (बटरस्कॉच)", 
+    "price": "20/-", 
+    "desc": "Small: 20, Medium: 40", 
+    "tags": ["Veg"], 
+    "img": "img/butterscotch.jpg",
+    "sizes": [
+      { "name": "Small", "price": 20 },
+      { "name": "Medium", "price": 40 },
+      { "name": "Live", "price": 30 },
+      { "name": "Ltr", "price": 250 }
+    ]
+  },
+  { 
+    "id": 32, 
+    "cat": "ICE CREAM PLANE", 
+    "name": "Pineapple (पायनॅपल)", 
+    "price": "20/-", 
+    "desc": "Small: 20, Medium: 40, Live: 30", 
+    "tags": ["Veg"], 
+    "img": "img/pineapple_plane.jpg",
+    "sizes": [
+      { "name": "Small", "price": 20 },
+      { "name": "Medium", "price": 40 },
+      { "name": "Live", "price": 30 },
+      { "name": "Ltr", "price": 250 }
+    ]
+  },
+  { 
+    "id": 33, 
+    "cat": "ICE CREAM PLANE", 
+    "name": "Peru (पेरू)", 
+    "price": "20/-", 
+    "desc": "Small: 20, Medium: 40, Live: 30", 
+    "tags": ["Veg"], 
+    "img": "img/peru_plane.jpg",
+    "sizes": [
+      { "name": "Small", "price": 20 },
+      { "name": "Medium", "price": 40 },
+      { "name": "Live", "price": 30 },
+      { "name": "Ltr", "price": 250 }
+    ]
+  },
+  { 
+    "id": 34, 
+    "cat": "ICE CREAM PLANE", 
+    "name": "Gulkand (गुलकंद)", 
+    "price": "20/-", 
+    "desc": "Small: 20, Medium: 40", 
+    "tags": ["Veg"], 
+    "img": "img/gulkand.jpg",
+    "sizes": [
+      { "name": "Small", "price": 20 },
+      { "name": "Medium", "price": 40 },
+      { "name": "Live", "price": 30 },
+      { "name": "Ltr", "price": 250 }
+    ]
+  },
+  { 
+    "id": 35, 
+    "cat": "ICE CREAM PLANE", 
+    "name": "American Dryfruit (अमेरिकन ड्रायफ्रुट)", 
+    "price": "20/-", 
+    "desc": "Small: 20, Medium: 40", 
+    "tags": ["Veg"], 
+    "img": "img/american_dryfruit.jpg",
+    "sizes": [
+      { "name": "Small", "price": 20 },
+      { "name": "Medium", "price": 40 },
+      { "name": "Live", "price": 30 },
+      { "name": "Ltr", "price": 250 }
+    ]
+  },
+  { 
+    "id": 36, 
+    "cat": "ICE CREAM PLANE", 
+    "name": "Chocolate (चॉकलेट)", 
+    "price": "20/-", 
+    "desc": "Small: 20, Medium: 40, Live: 30", 
+    "tags": ["Veg"], 
+    "img": "img/chocolate_plane.jpg",
+    "sizes": [
+      { "name": "Small", "price": 20 },
+      { "name": "Medium", "price": 40 },
+      { "name": "Live", "price": 30 },
+      { "name": "Ltr", "price": 250 }
+    ]
+  },
+  { 
+    "id": 37, 
+    "cat": "COOKIES", 
+    "name": "Gavrani Tupache Cookies (गवराणी तुपाचे कुकीज)", 
+    "price": "400/- per kg", 
+    "desc": "Traditional ghee cookies - With Dryfruit: 450/- per kg", 
+    "tags": ["Veg"], 
+    "img": "img/gavrani_tupache_cookies.jpg",
+    "sizes": [
+      { "name": "Regular (1kg)", "price": 400 },
+      { "name": "With Dryfruit (1kg)", "price": 450 }
+    ]
+  },
+  { 
+    "id": 38, 
+    "cat": "COOKIES", 
+    "name": "Kanik Buiscuit (कणिक बिस्किट)", 
+    "price": "160/- per kg", 
+    "desc": "Classic flour biscuits", 
+    "tags": ["Veg"], 
+    "img": "img/kanik_buiscuit.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 40 },
+      { "name": "500gm", "price": 80 },
+      { "name": "1kg", "price": 160 }
+    ]
+  },
+  { 
+    "id": 39, 
+    "cat": "COOKIES", 
+    "name": "Nagli Buiscuit (नागली बिस्किट)", 
+    "price": "200/- per kg", 
+    "desc": "Healthy ragi biscuits", 
+    "tags": ["Veg"], 
+    "img": "img/nagli_buiscuit.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 50 },
+      { "name": "500gm", "price": 100 },
+      { "name": "1kg", "price": 200 }
+    ]
+  },
+  { 
+    "id": 40, 
+    "cat": "COOKIES", 
+    "name": "Coconut Cookies (कोकोनट कुकीज)", 
+    "price": "200/- per kg", 
+    "desc": "Delicious coconut flavored cookies", 
+    "tags": ["Veg"], 
+    "img": "img/coconut_cookies.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 50 },
+      { "name": "500gm", "price": 100 },
+      { "name": "1kg", "price": 200 }
+    ]
+  },
+  { 
+    "id": 41, 
+    "cat": "COOKIES", 
+    "name": "Chocolate Cookies (चॉकलेट कुकीज)", 
+    "price": "260/- per kg", 
+    "desc": "Rich chocolate cookies", 
+    "tags": ["Veg"], 
+    "img": "img/chocolate_cookies.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 65 },
+      { "name": "500gm", "price": 130 },
+      { "name": "1kg", "price": 260 }
+    ]
+  },
+  { 
+    "id": 42, 
+    "cat": "COOKIES", 
+    "name": "Nutfruit Cookies (नटफ्रूट कुकीज)", 
+    "price": "280/- per kg", 
+    "desc": "Cookies with nuts and dry fruits", 
+    "tags": ["Veg"], 
+    "img": "img/nutfruit_cookies.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 70 },
+      { "name": "500gm", "price": 140 },
+      { "name": "1kg", "price": 280 }
+    ]
+  },
+  { 
+    "id": 43, 
+    "cat": "COOKIES", 
+    "name": "Basundi Cookies (बासुंदी कुकीज)", 
+    "price": "280/- per kg", 
+    "desc": "Basundi flavored sweet cookies", 
+    "tags": ["Veg"], 
+    "img": "img/basundi_cookies.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 70 },
+      { "name": "500gm", "price": 140 },
+      { "name": "1kg", "price": 280 }
+    ]
+  },
+  { 
+    "id": 44, 
+    "cat": "COOKIES", 
+    "name": "Honey Almond Cookies (हनी अल्मंड कुकीज)", 
+    "price": "280/- per kg", 
+    "desc": "Honey and almond cookies", 
+    "tags": ["Veg"], 
+    "img": "img/honey_almond_cookies.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 70 },
+      { "name": "500gm", "price": 140 },
+      { "name": "1kg", "price": 280 }
+    ]
+  },
+  { 
+    "id": 50, 
+    "cat": "CAKE", 
+    "name": "Black Forest Cake (ब्लैक फॉरेस्ट केक)", 
+    "price": "150/-", 
+    "desc": "Classic chocolate cake with cherry and cream", 
+    "tags": ["Veg"], 
+    "img": "img/black_forest_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 150 },
+      { "name": "500gm", "price": 250 },
+      { "name": "1Kg", "price": 500 }
+    ]
+  },
+  { 
+    "id": 51, 
+    "cat": "CAKE", 
+    "name": "Chocolate Cake (चॉकलेट केक)", 
+    "price": "150/-", 
+    "desc": "Rich and moist chocolate cake", 
+    "tags": ["Veg"], 
+    "img": "img/chocolate_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 150 },
+      { "name": "500gm", "price": 250 },
+      { "name": "1Kg", "price": 500 }
+    ]
+  },
+  { 
+    "id": 52, 
+    "cat": "CAKE", 
+    "name": "Pan Cake (पैन केक)", 
+    "price": "150/-", 
+    "desc": "Soft and fluffy pan cake", 
+    "tags": ["Veg"], 
+    "img": "img/pan_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 150 },
+      { "name": "500gm", "price": 250 },
+      { "name": "1Kg", "price": 500 }
+    ]
+  },
+  { 
+    "id": 53, 
+    "cat": "CAKE", 
+    "name": "Strawberry Cake (स्ट्रॉबेरी केक)", 
+    "price": "150/-", 
+    "desc": "Delicious strawberry flavored cake", 
+    "tags": ["Veg"], 
+    "img": "img/strawberry_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 150 },
+      { "name": "500gm", "price": 250 },
+      { "name": "1Kg", "price": 500 }
+    ]
+  },
+  { 
+    "id": 54, 
+    "cat": "CAKE", 
+    "name": "Pineapple Cake (पाइनएप्पल केक)", 
+    "price": "150/-", 
+    "desc": "Refreshing pineapple cake", 
+    "tags": ["Veg"], 
+    "img": "img/pineapple_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 150 },
+      { "name": "500gm", "price": 250 },
+      { "name": "1Kg", "price": 500 }
+    ]
+  },
+  { 
+    "id": 55, 
+    "cat": "CAKE", 
+    "name": "Butterscotch Cake (बटरस्कॉच केक)", 
+    "price": "150/-", 
+    "desc": "Crunchy butterscotch cake", 
+    "tags": ["Veg"], 
+    "img": "img/butterscotch_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 150 },
+      { "name": "500gm", "price": 250 },
+      { "name": "1Kg", "price": 500 }
+    ]
+  },
+  { 
+    "id": 56, 
+    "cat": "CAKE", 
+    "name": "Blueberry Cake (ब्लूबेरी केक)", 
+    "price": "150/-", 
+    "desc": "Tangy blueberry flavored cake", 
+    "tags": ["Veg"], 
+    "img": "img/blueberry_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 150 },
+      { "name": "500gm", "price": 250 },
+      { "name": "1Kg", "price": 500 }
+    ]
+  },
+  { 
+    "id": 57, 
+    "cat": "CAKE", 
+    "name": "Gulkand Badam Cake (गुलकंद बादाम केक)", 
+    "price": "150/-", 
+    "desc": "Unique gulkand and almond cake", 
+    "tags": ["Veg"], 
+    "img": "img/gulkand_badam_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 150 },
+      { "name": "500gm", "price": 250 },
+      { "name": "1Kg", "price": 500 }
+    ]
+  },
+  { 
+    "id": 58, 
+    "cat": "CAKE", 
+    "name": "Red Rose Cake (रेड रोज़ केक)", 
+    "price": "150/-", 
+    "desc": "Rose flavored red velvet cake", 
+    "tags": ["Veg"], 
+    "img": "img/red_rose_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 150 },
+      { "name": "500gm", "price": 250 },
+      { "name": "1Kg", "price": 500 }
+    ]
+  },
+  { 
+    "id": 59, 
+    "cat": "CAKE", 
+    "name": "White Forest Cake (व्हाइट फॉरेस्ट केक)", 
+    "price": "150/-", 
+    "desc": "Creamy white forest cake", 
+    "tags": ["Veg"], 
+    "img": "img/white_forest_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 150 },
+      { "name": "500gm", "price": 250 },
+      { "name": "1Kg", "price": 500 }
+    ]
+  },
+  { 
+    "id": 60, 
+    "cat": "CAKE", 
+    "name": "Kasata Cake (कसाटा केक)", 
+    "price": "150/-", 
+    "desc": "Delicious kasata cake", 
+    "tags": ["Veg"], 
+    "img": "img/kasata_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 150 },
+      { "name": "500gm", "price": 250 },
+      { "name": "1Kg", "price": 600 }
+    ]
+  },
+  { 
+    "id": 61, 
+    "cat": "CAKE", 
+    "name": "Red Velvet Cake (रेड वेल्वेट केक)", 
+    "price": "170/-", 
+    "desc": "Classic red velvet with cream cheese", 
+    "tags": ["Veg"], 
+    "img": "img/red_velvet_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 170 },
+      { "name": "500gm", "price": 300 },
+      { "name": "1Kg", "price": 600 }
+    ]
+  },
+  { 
+    "id": 62, 
+    "cat": "CAKE", 
+    "name": "Green Velvet Cake (ग्रीन वेल्वेट केक)", 
+    "price": "170/-", 
+    "desc": "Green colored velvet cake", 
+    "tags": ["Veg"], 
+    "img": "img/green_velvet_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 170 },
+      { "name": "500gm", "price": 300 },
+      { "name": "1Kg", "price": 600 }
+    ]
+  },
+  { 
+    "id": 63, 
+    "cat": "CAKE", 
+    "name": "Chocolate Truffle Cake (चॉकलेट ट्रफल केक)", 
+    "price": "200/-", 
+    "desc": "Rich chocolate truffle cake", 
+    "tags": ["Veg"], 
+    "img": "img/chocolate_truffle_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 200 },
+      { "name": "500gm", "price": 350 },
+      { "name": "1Kg", "price": 700 }
+    ]
+  },
+  { 
+    "id": 64, 
+    "cat": "CAKE", 
+    "name": "Mawa Malai Cake (मावा मलाई केक)", 
+    "price": "200/-", 
+    "desc": "Traditional mawa malai flavored cake", 
+    "tags": ["Veg"], 
+    "img": "img/mawa_malai_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 200 },
+      { "name": "500gm", "price": 350 },
+      { "name": "1Kg", "price": 700 }
+    ]
+  },
+  { 
+    "id": 65, 
+    "cat": "CAKE", 
+    "name": "Rasmalai Cake (रसमलाई केक)", 
+    "price": "200/-", 
+    "desc": "Rasmalai flavored creamy cake", 
+    "tags": ["Veg"], 
+    "img": "img/rasmalai_cake.jpg",
+    "sizes": [
+      { "name": "250gm", "price": 200 },
+      { "name": "500gm", "price": 350 },
+      { "name": "1Kg", "price": 700 }
+    ]
+  }
+];
         // Cart functionality    
         let cart = [];
         let deliveryType = 'restaurant'; // Default to restaurant
