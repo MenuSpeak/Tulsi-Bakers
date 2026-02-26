@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
       
@@ -41,30 +38,18 @@
             margin: 2px;
         }
 
+        .tabs-container {
+            text-align: center;
+        }
 
+        .tab-row {
+            margin-bottom: 10px;
+        }
 
+        .tab {
+            margin: 4px;
+        }
 
-
-        
-
-.tabs-container {
-  text-align: center;
-}
-
-.tab-row {
-  margin-bottom: 10px;
-}
-
-.tab {
-  margin: 4px;
-}
-
-
-
-
-
-        
-        
         .tab.active {
             background: linear-gradient(90deg, var(--gold1), var(--gold2));
             color: #0b0b0d;
@@ -121,17 +106,6 @@
                 gap: 5px;
             }
         }
-
-
-
-
-
-
-
-
-
-
-
 
         :root {
             --bg: #0b0b0d;
@@ -555,6 +529,37 @@
             margin-top: 4px;
         }
 
+        /* Size Selector Styles */
+        .size-selector {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+
+        .size-btn {
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--muted);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .size-btn:hover {
+            border-color: var(--gold1);
+            color: var(--gold2);
+        }
+
+        .size-btn.active {
+            background: linear-gradient(90deg, var(--gold1), var(--gold2));
+            border-color: transparent;
+            color: #0b0b0d;
+            font-weight: 600;
+        }
+
         .card-footer {
             display: flex;
             justify-content: space-between;
@@ -564,7 +569,7 @@
 
         .price {
             font-weight: 700;
-            font-size: 16px;
+            font-size: 18px;
             color: var(--gold2);
             flex-shrink: 0;
         }
@@ -783,9 +788,16 @@
             font-size: 15px;
         }
 
+        .item-size {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
         .item-price {
             color: var(--gold2);
             font-size: 14px;
+            font-weight: 600;
         }
 
         .item-quantity {
@@ -1168,17 +1180,6 @@
             </div>
         </div>
 
-<!-- <div class="insta-link-container">
-    <a href="https://www.instagram.com/ramdev_punjabi_tadka_ambach?igsh=eWFldmRxczExZWNj" target="_blank" class="insta-btn"> -->
-        <!-- <svg viewBox="121010" fill="currentColor"> -->
-            <!-- <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        Follow us on Instagram
-    </a>
-</div> -->
-
-
-
-        
         <!-- Main Menu -->
         <main class="menu">
             <div class="menu-head">
@@ -1193,20 +1194,20 @@
                         <input id="search" placeholder="Search dishes, ingredients..." />
                     </div>
 
-
-
-   <div class="tabs-scroll">
-<button class="tab active" data-cat="all">🍽️ All Items (सर्व पदार्थ)</button>
-<button class="tab" data-cat="NATURAL ICE CREAM">🍦 Natural Ice Cream (नॅचरल आईस्क्रीम)</button>
-<button class="tab" data-cat="ICE CREAM PLANE">🍨 Plane Ice Cream (प्लेन आईस्क्रीम)</button>
-<button class="tab" data-cat="MOJITO">🍹 Mojito & Soda (मोजितो आणि सोडा)</button>
-<button class="tab" data-cat="MILKSHAKE">🥤 Milkshake (मिल्कशेक)</button>
-<button class="tab" data-cat="MASTANI">🍧 Mastani (मस्तानी)</button>
-<button class="tab" data-cat="SPECIAL MASTANI">🌟 Special Mastani (स्पेशल मस्तानी)</button>
-<button class="tab" data-cat="COFFEE">☕ Cold Coffee (कोल्ड कॉफी)</button>
-<button class="tab" data-cat="DRINKS">🍫 Cad-B & Cad-M (कॅड-बी आणि कॅड-एम)</button>
-<button class="tab" data-cat="DESSERT">🍰 Brownie & Desserts (ब्राउनी आणि डेझर्ट)</button>
-               </div>  
+                    <div class="tabs-scroll">
+                        <button class="tab active" data-cat="all">🍽️ All Items (सर्व पदार्थ)</button>
+                        <button class="tab" data-cat="NATURAL ICE CREAM">🍦 Natural Ice Cream (नॅचरल आईस्क्रीम)</button>
+                        <button class="tab" data-cat="ICE CREAM PLANE">🍨 Plane Ice Cream (प्लेन आईस्क्रीम)</button>
+                        <button class="tab" data-cat="MOJITO">🍹 Mojito & Soda (मोजितो आणि सोडा)</button>
+                        <button class="tab" data-cat="MILKSHAKE">🥤 Milkshake (मिल्कशेक)</button>
+                        <button class="tab" data-cat="MASTANI">🍧 Mastani (मस्तानी)</button>
+                        <button class="tab" data-cat="SPECIAL MASTANI">🌟 Special Mastani (स्पेशल मस्तानी)</button>
+                        <button class="tab" data-cat="COFFEE">☕ Cold Coffee (कोल्ड कॉफी)</button>
+                        <button class="tab" data-cat="DRINKS">🍫 Cad-B & Cad-M (कॅड-बी आणि कॅड-एम)</button>
+                        <button class="tab" data-cat="DESSERT">🍰 Brownie & Desserts (ब्राउनी आणि डेझर्ट)</button>
+                        <button class="tab" data-cat="COOKIES">🍪 Cookies (कुकीज)</button>
+                        <button class="tab" data-cat="CAKE">🎂 Cake (केक)</button>
+                    </div>  
                 </div>
             </div>
 
@@ -1348,72 +1349,609 @@
     </div>
 
     <script>
-        // Menu Data - FIXED VERSION
+        // Menu Data - FIXED VERSION with size options
         const data = [
-      { "id": 1, "cat": "NATURAL ICE CREAM", "name": "Sitafal (सिताफळ)", "price": "35/-", "desc": "Small: 35, Medium: 70, 1 Liter: 400", "tags": ["Veg"], "img": "img/sitafal.jpg" },
-{ "id": 2, "cat": "NATURAL ICE CREAM", "name": "Chiku (चिक्कू)", "price": "30/-", "desc": "Small: 30, Medium: 60, 1 Liter: 350", "tags": ["Veg"], "img": "img/chiku.jpg" },
-{ "id": 3, "cat": "NATURAL ICE CREAM", "name": "Strawberry (स्ट्रॉबेरी)", "price": "30/-", "desc": "Small: 30, Medium: 60, 1 Liter: 350", "tags": ["Veg"], "img": "img/strawberry.jpg" },
-{ "id": 4, "cat": "NATURAL ICE CREAM", "name": "Mango (मँगो)", "price": "30/-", "desc": "Small: 30, Medium: 60, 1 Liter: 350", "tags": ["Veg"], "img": "img/mango.jpg" },
-{ "id": 5, "cat": "NATURAL ICE CREAM", "name": "Peru (पेरू)", "price": "30/-", "desc": "Small: 30, Medium: 60, 1 Liter: 350", "tags": ["Veg"], "img": "img/peru.jpg" },
-{ "id": 6, "cat": "NATURAL ICE CREAM", "name": "Pineapple (पायनॅपल)", "price": "30/-", "desc": "Small: 30, Medium: 60, 1 Liter: 350", "tags": ["Veg"], "img": "img/pineapple.jpg" },
-{ "id": 7, "cat": "NATURAL ICE CREAM", "name": "Rajwadi (राजवाडी)", "price": "35/-", "desc": "Small: 35, Medium: 70, 1 Liter: 400", "tags": ["Veg"], "img": "img/rajwadi.jpg" },
-{ "id": 8, "cat": "NATURAL ICE CREAM", "name": "Anjir (अंजीर)", "price": "30/-", "desc": "Small: 30, Medium: 60, 1 Liter: 350", "tags": ["Veg"], "img": "img/anjir.jpg" },
-{ "id": 9, "cat": "NATURAL ICE CREAM", "name": "Chocolate (चॉकलेट)", "price": "30/-", "desc": "Small: 30, Medium: 60, 1 Liter: 350", "tags": ["Veg"], "img": "img/chocolate.jpg" },
-{ "id": 10, "cat": "MOJITO", "name": "Blue Logan Mojito", "price": "", "desc": "Available in 25/40/60 sizes", "tags": ["Veg"], "img": "img/blue_logan.jpg" },
-{ "id": 11, "cat": "MOJITO", "name": "Karvanda Mojito", "price": "", "desc": "Refreshing Karvanda flavor", "tags": ["Veg"], "img": "img/karvanda.jpg" },
-{ "id": 12, "cat": "MOJITO", "name": "Peru Gulabi Mojito", "price": "", "desc": "Pink Guava flavor", "tags": ["Veg"], "img": "img/peru_gulabi.jpg" },
-{ "id": 13, "cat": "MOJITO", "name": "Mango Mojito", "price": "", "desc": "Sweet Mango flavor", "tags": ["Veg"], "img": "img/mango_mojito.jpg" },
-{ "id": 14, "cat": "MOJITO", "name": "Kacchi Kairi Mojito", "price": "", "desc": "Tangy Raw Mango flavor", "tags": ["Veg"], "img": "img/kacchi_kairi.jpg" },
-{ "id": 15, "cat": "MOJITO", "name": "Fresh Lime Soda", "price": "", "desc": "Classic Lime Soda", "tags": ["Veg"], "img": "img/fresh_lime.jpg" },
-{ "id": 16, "cat": "MOJITO", "name": "Strawberry Mojito", "price": "", "desc": "Berry fresh flavor", "tags": ["Veg"], "img": "img/strawberry_mojito.jpg" },
-{ "id": 17, "cat": "MOJITO", "name": "Blueberry Mojito", "price": "", "desc": "Rich Blueberry flavor", "tags": ["Veg"], "img": "img/blueberry_mojito.jpg" },
-{ "id": 18, "cat": "MOJITO", "name": "Pineapple Mojito", "price": "", "desc": "Tropical Pineapple flavor", "tags": ["Veg"], "img": "img/pineapple_mojito.jpg" },
-{ "id": 19, "cat": "MILKSHAKE", "name": "Mango Milkshake", "price": "60/-", "desc": "Thick Mango Shake", "tags": ["Veg"], "img": "img/mango_shake.jpg" },
-{ "id": 20, "cat": "MILKSHAKE", "name": "Rose Milkshake", "price": "60/-", "desc": "Sweet Rose Shake", "tags": ["Veg"], "img": "img/rose_shake.jpg" },
-{ "id": 21, "cat": "MILKSHAKE", "name": "Strawberry Milkshake", "price": "60/-", "desc": "Fresh Strawberry Shake", "tags": ["Veg"], "img": "img/strawberry_shake.jpg" },
-{ "id": 22, "cat": "MILKSHAKE", "name": "Pineapple Milkshake", "price": "60/-", "desc": "Pineapple Shake", "tags": ["Veg"], "img": "img/pineapple_shake.jpg" },
-{ "id": 23, "cat": "MILKSHAKE", "name": "Chocolate Milkshake", "price": "60/-", "desc": "Rich Chocolate Shake", "tags": ["Veg"], "img": "img/chocolate_shake.jpg" },
-{ "id": 24, "cat": "COFFEE", "name": "Cold Coffee (कोल्ड कॉफी)", "price": "60/-", "desc": "Creamy Cold Coffee", "tags": ["Veg"], "img": "img/cold_coffee.jpg" },
-{ "id": 25, "cat": "DESSERT", "name": "Brownie (ब्राउनी)", "price": "50/-", "desc": "Chocolate Brownie", "tags": ["Veg"], "img": "img/brownie.jpg" },
-{ "id": 26, "cat": "DESSERT", "name": "Chocolate Dessert Bowl", "price": "100/-", "desc": "Loaded Dessert Bowl", "tags": ["Veg"], "img": "img/choco_bowl.jpg" },
-{ "id": 27, "cat": "ICE CREAM PLANE", "name": "Vanilla (व्हॅनिला)", "price": "20/-", "desc": "Small: 20, Medium: 40, Cone: 30", "tags": ["Veg"], "img": "img/vanilla.jpg" },
-{ "id": 28, "cat": "ICE CREAM PLANE", "name": "Mango (मँगो)", "price": "20/-", "desc": "Small: 20, Medium: 40, Cone: 30", "tags": ["Veg"], "img": "img/mango_plane.jpg" },
-{ "id": 29, "cat": "ICE CREAM PLANE", "name": "Strawberry (स्ट्रॉबेरी)", "price": "20/-", "desc": "Small: 20, Medium: 40, Cone: 30", "tags": ["Veg"], "img": "img/strawberry_plane.jpg" },
-{ "id": 30, "cat": "ICE CREAM PLANE", "name": "Pista (पस्ता)", "price": "20/-", "desc": "Small: 20, Medium: 40, Cone: 30", "tags": ["Veg"], "img": "img/pista.jpg" },
-{ "id": 31, "cat": "ICE CREAM PLANE", "name": "Butterscotch (बटरस्कॉच)", "price": "20/-", "desc": "Small: 20, Medium: 40", "tags": ["Veg"], "img": "img/butterscotch.jpg" },
-{ "id": 32, "cat": "ICE CREAM PLANE", "name": "Pineapple (पायनॅपल)", "price": "20/-", "desc": "Small: 20, Medium: 40, Cone: 30", "tags": ["Veg"], "img": "img/pineapple_plane.jpg" },
-{ "id": 33, "cat": "ICE CREAM PLANE", "name": "Peru (पेरू)", "price": "20/-", "desc": "Small: 20, Medium: 40, Cone: 30", "tags": ["Veg"], "img": "img/peru_plane.jpg" },
-{ "id": 34, "cat": "ICE CREAM PLANE", "name": "Gulkand (गुलकंद)", "price": "20/-", "desc": "Small: 20, Medium: 40", "tags": ["Veg"], "img": "img/gulkand.jpg" },
-{ "id": 35, "cat": "ICE CREAM PLANE", "name": "American Dryfruit (अमेरिकन ड्रायफ्रुट)", "price": "20/-", "desc": "Small: 20, Medium: 40", "tags": ["Veg"], "img": "img/american_dryfruit.jpg" },
-{ "id": 36, "cat": "ICE CREAM PLANE", "name": "Chocolate (चॉकलेट)", "price": "20/-", "desc": "Small: 20, Medium: 40, Cone: 30", "tags": ["Veg"], "img": "img/chocolate_plane.jpg" },
-
-{ "id": 37, "cat": "COOKIES", "name": "Gavrani Tupache Cookies (गवराणी तुपाचे कुकीज)", "price": "400/- per kg | With Dryfruit: 450/- per kg", "desc": "Traditional ghee cookies", "tags": ["Veg"], "img": "img/gavrani_tupache_cookies.jpg" },
-{ "id": 38, "cat": "COOKIES", "name": "Kanik Buiscuit (कणिक बिस्किट)", "price": "160/- per kg", "desc": "Classic flour biscuits", "tags": ["Veg"], "img": "img/kanik_buiscuit.jpg" },
-{ "id": 39, "cat": "COOKIES", "name": "Nagli Buiscuit (नागली बिस्किट)", "price": "200/- per kg", "desc": "Healthy ragi biscuits", "tags": ["Veg"], "img": "img/nagli_buiscuit.jpg" },
-{ "id": 40, "cat": "COOKIES", "name": "Coconut Cookies (कोकोनट कुकीज)", "price": "200/- per kg", "desc": "Delicious coconut flavored cookies", "tags": ["Veg"], "img": "img/coconut_cookies.jpg" },
-{ "id": 41, "cat": "COOKIES", "name": "Chocolate Cookies (चॉकलेट कुकीज)", "price": "260/- per kg", "desc": "Rich chocolate cookies", "tags": ["Veg"], "img": "img/chocolate_cookies.jpg" },
-{ "id": 42, "cat": "COOKIES", "name": "Nutfruit Cookies (नटफ्रूट कुकीज)", "price": "280/- per kg", "desc": "Cookies with nuts and dry fruits", "tags": ["Veg"], "img": "img/nutfruit_cookies.jpg" },
-{ "id": 43, "cat": "COOKIES", "name": "Basundi Cookies (बासुंदी कुकीज)", "price": "280/- per kg", "desc": "Basundi flavored sweet cookies", "tags": ["Veg"], "img": "img/basundi_cookies.jpg" },
-{ "id": 44, "cat": "COOKIES", "name": "Honey Almond Cookies (हनी अल्मंड कुकीज)", "price": "280/- per kg", "desc": "Honey and almond cookies", "tags": ["Veg"], "img": "img/honey_almond_cookies.jpg" },
-              
-{ "id": 50, "cat": "CAKE", "name": "Black Forest Cake (ब्लैक फॉरेस्ट केक)", "price": "250gm: 150/- | 500gm: 250/- | 1Kg: 500/-", "desc": "Classic chocolate cake with cherry and cream", "tags": ["Veg"], "img": "img/black_forest_cake.jpg" },
-{ "id": 51, "cat": "CAKE", "name": "Chocolate Cake (चॉकलेट केक)", "price": "250gm: 150/- | 500gm: 250/- | 1Kg: 500/-", "desc": "Rich and moist chocolate cake", "tags": ["Veg"], "img": "img/chocolate_cake.jpg" },
-{ "id": 52, "cat": "CAKE", "name": "Pan Cake (पैन केक)", "price": "250gm: 150/- | 500gm: 250/- | 1Kg: 500/-", "desc": "Soft and fluffy pan cake", "tags": ["Veg"], "img": "img/pan_cake.jpg" },
-{ "id": 53, "cat": "CAKE", "name": "Strawberry Cake (स्ट्रॉबेरी केक)", "price": "250gm: 150/- | 500gm: 250/- | 1Kg: 500/-", "desc": "Delicious strawberry flavored cake", "tags": ["Veg"], "img": "img/strawberry_cake.jpg" },
-{ "id": 54, "cat": "CAKE", "name": "Pineapple Cake (पाइनएप्पल केक)", "price": "250gm: 150/- | 500gm: 250/- | 1Kg: 500/-", "desc": "Refreshing pineapple cake", "tags": ["Veg"], "img": "img/pineapple_cake.jpg" },
-{ "id": 55, "cat": "CAKE", "name": "Butterscotch Cake (बटरस्कॉच केक)", "price": "250gm: 150/- | 500gm: 250/- | 1Kg: 500/-", "desc": "Crunchy butterscotch cake", "tags": ["Veg"], "img": "img/butterscotch_cake.jpg" },
-{ "id": 56, "cat": "CAKE", "name": "Blueberry Cake (ब्लूबेरी केक)", "price": "250gm: 150/- | 500gm: 250/- | 1Kg: 500/-", "desc": "Tangy blueberry flavored cake", "tags": ["Veg"], "img": "img/blueberry_cake.jpg" },
-{ "id": 57, "cat": "CAKE", "name": "Gulkand Badam Cake (गुलकंद बादाम केक)", "price": "250gm: 150/- | 500gm: 250/- | 1Kg: 500/-", "desc": "Unique gulkand and almond cake", "tags": ["Veg"], "img": "img/gulkand_badam_cake.jpg" },
-{ "id": 58, "cat": "CAKE", "name": "Red Rose Cake (रेड रोज़ केक)", "price": "250gm: 150/- | 500gm: 250/- | 1Kg: 500/-", "desc": "Rose flavored red velvet cake", "tags": ["Veg"], "img": "img/red_rose_cake.jpg" },
-{ "id": 59, "cat": "CAKE", "name": "White Forest Cake (व्हाइट फॉरेस्ट केक)", "price": "250gm: 150/- | 500gm: 250/- | 1Kg: 500/-", "desc": "Creamy white forest cake", "tags": ["Veg"], "img": "img/white_forest_cake.jpg" },
-{ "id": 60, "cat": "CAKE", "name": "Kasata Cake (कसाटा केक)", "price": "250gm: 150/- | 500gm: 250/- | 1Kg: 600/-", "desc": "Delicious kasata cake", "tags": ["Veg"], "img": "img/kasata_cake.jpg" },
-{ "id": 61, "cat": "CAKE", "name": "Red Velvet Cake (रेड वेल्वेट केक)", "price": "250gm: 170/- | 500gm: 300/- | 1Kg: 600/-", "desc": "Classic red velvet with cream cheese", "tags": ["Veg"], "img": "img/red_velvet_cake.jpg" },
-{ "id": 62, "cat": "CAKE", "name": "Green Velvet Cake (ग्रीन वेल्वेट केक)", "price": "250gm: 170/- | 500gm: 300/- | 1Kg: 600/-", "desc": "Green colored velvet cake", "tags": ["Veg"], "img": "img/green_velvet_cake.jpg" },
-{ "id": 63, "cat": "CAKE", "name": "Chocolate Truffle Cake (चॉकलेट ट्रफल केक)", "price": "250gm: 200/- | 500gm: 350/- | 1Kg: 700/-", "desc": "Rich chocolate truffle cake", "tags": ["Veg"], "img": "img/chocolate_truffle_cake.jpg" },
-{ "id": 64, "cat": "CAKE", "name": "Mawa Malai Cake (मावा मलाई केक)", "price": "250gm: 200/- | 500gm: 350/- | 1Kg: 700/-", "desc": "Traditional mawa malai flavored cake", "tags": ["Veg"], "img": "img/mawa_malai_cake.jpg" },
-{ "id": 65, "cat": "CAKE", "name": "Rasmalai Cake (रसमलाई केक)", "price": "250gm: 200/- | 500gm: 350/- | 1Kg: 700/-", "desc": "Rasmalai flavored creamy cake", "tags": ["Veg"], "img": "img/rasmalai_cake.jpg" },
-
-          ];
+      { 
+        "id": 1, 
+        "cat": "NATURAL ICE CREAM", 
+        "name": "Sitafal (सिताफळ)", 
+        "price": "35/-", 
+        "desc": "Small: 35, Medium: 70, 1 Liter: 400", 
+        "tags": ["Veg"], 
+        "img": "img/sitafal.jpg",
+        "sizes": [
+          { "name": "Small", "price": 35 },
+          { "name": "Medium", "price": 70 },
+          { "name": "1 Liter", "price": 400 }
+        ]
+      },
+      { 
+        "id": 2, 
+        "cat": "NATURAL ICE CREAM", 
+        "name": "Chiku (चिक्कू)", 
+        "price": "30/-", 
+        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+        "tags": ["Veg"], 
+        "img": "img/chiku.jpg",
+        "sizes": [
+          { "name": "Small", "price": 30 },
+          { "name": "Medium", "price": 60 },
+          { "name": "1 Liter", "price": 350 }
+        ]
+      },
+      { 
+        "id": 3, 
+        "cat": "NATURAL ICE CREAM", 
+        "name": "Strawberry (स्ट्रॉबेरी)", 
+        "price": "30/-", 
+        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+        "tags": ["Veg"], 
+        "img": "img/strawberry.jpg",
+        "sizes": [
+          { "name": "Small", "price": 30 },
+          { "name": "Medium", "price": 60 },
+          { "name": "1 Liter", "price": 350 }
+        ]
+      },
+      { 
+        "id": 4, 
+        "cat": "NATURAL ICE CREAM", 
+        "name": "Mango (मँगो)", 
+        "price": "30/-", 
+        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+        "tags": ["Veg"], 
+        "img": "img/mango.jpg",
+        "sizes": [
+          { "name": "Small", "price": 30 },
+          { "name": "Medium", "price": 60 },
+          { "name": "1 Liter", "price": 350 }
+        ]
+      },
+      { 
+        "id": 5, 
+        "cat": "NATURAL ICE CREAM", 
+        "name": "Peru (पेरू)", 
+        "price": "30/-", 
+        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+        "tags": ["Veg"], 
+        "img": "img/peru.jpg",
+        "sizes": [
+          { "name": "Small", "price": 30 },
+          { "name": "Medium", "price": 60 },
+          { "name": "1 Liter", "price": 350 }
+        ]
+      },
+      { 
+        "id": 6, 
+        "cat": "NATURAL ICE CREAM", 
+        "name": "Pineapple (पायनॅपल)", 
+        "price": "30/-", 
+        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+        "tags": ["Veg"], 
+        "img": "img/pineapple.jpg",
+        "sizes": [
+          { "name": "Small", "price": 30 },
+          { "name": "Medium", "price": 60 },
+          { "name": "1 Liter", "price": 350 }
+        ]
+      },
+      { 
+        "id": 7, 
+        "cat": "NATURAL ICE CREAM", 
+        "name": "Rajwadi (राजवाडी)", 
+        "price": "35/-", 
+        "desc": "Small: 35, Medium: 70, 1 Liter: 400", 
+        "tags": ["Veg"], 
+        "img": "img/rajwadi.jpg",
+        "sizes": [
+          { "name": "Small", "price": 35 },
+          { "name": "Medium", "price": 70 },
+          { "name": "1 Liter", "price": 400 }
+        ]
+      },
+      { 
+        "id": 8, 
+        "cat": "NATURAL ICE CREAM", 
+        "name": "Anjir (अंजीर)", 
+        "price": "30/-", 
+        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+        "tags": ["Veg"], 
+        "img": "img/anjir.jpg",
+        "sizes": [
+          { "name": "Small", "price": 30 },
+          { "name": "Medium", "price": 60 },
+          { "name": "1 Liter", "price": 350 }
+        ]
+      },
+      { 
+        "id": 9, 
+        "cat": "NATURAL ICE CREAM", 
+        "name": "Chocolate (चॉकलेट)", 
+        "price": "30/-", 
+        "desc": "Small: 30, Medium: 60, 1 Liter: 350", 
+        "tags": ["Veg"], 
+        "img": "img/chocolate.jpg",
+        "sizes": [
+          { "name": "Small", "price": 30 },
+          { "name": "Medium", "price": 60 },
+          { "name": "1 Liter", "price": 350 }
+        ]
+      },
+      { 
+        "id": 27, 
+        "cat": "ICE CREAM PLANE", 
+        "name": "Vanilla (व्हॅनिला)", 
+        "price": "20/-", 
+        "desc": "Small: 20, Medium: 40, Cone: 30", 
+        "tags": ["Veg"], 
+        "img": "img/vanilla.jpg",
+        "sizes": [
+          { "name": "Small", "price": 20 },
+          { "name": "Medium", "price": 40 },
+          { "name": "Cone", "price": 30 }
+        ]
+      },
+      { 
+        "id": 28, 
+        "cat": "ICE CREAM PLANE", 
+        "name": "Mango (मँगो)", 
+        "price": "20/-", 
+        "desc": "Small: 20, Medium: 40, Cone: 30", 
+        "tags": ["Veg"], 
+        "img": "img/mango_plane.jpg",
+        "sizes": [
+          { "name": "Small", "price": 20 },
+          { "name": "Medium", "price": 40 },
+          { "name": "Cone", "price": 30 }
+        ]
+      },
+      { 
+        "id": 29, 
+        "cat": "ICE CREAM PLANE", 
+        "name": "Strawberry (स्ट्रॉबेरी)", 
+        "price": "20/-", 
+        "desc": "Small: 20, Medium: 40, Cone: 30", 
+        "tags": ["Veg"], 
+        "img": "img/strawberry_plane.jpg",
+        "sizes": [
+          { "name": "Small", "price": 20 },
+          { "name": "Medium", "price": 40 },
+          { "name": "Cone", "price": 30 }
+        ]
+      },
+      { 
+        "id": 30, 
+        "cat": "ICE CREAM PLANE", 
+        "name": "Pista (पस्ता)", 
+        "price": "20/-", 
+        "desc": "Small: 20, Medium: 40, Cone: 30", 
+        "tags": ["Veg"], 
+        "img": "img/pista.jpg",
+        "sizes": [
+          { "name": "Small", "price": 20 },
+          { "name": "Medium", "price": 40 },
+          { "name": "Cone", "price": 30 }
+        ]
+      },
+      { 
+        "id": 31, 
+        "cat": "ICE CREAM PLANE", 
+        "name": "Butterscotch (बटरस्कॉच)", 
+        "price": "20/-", 
+        "desc": "Small: 20, Medium: 40", 
+        "tags": ["Veg"], 
+        "img": "img/butterscotch.jpg",
+        "sizes": [
+          { "name": "Small", "price": 20 },
+          { "name": "Medium", "price": 40 }
+        ]
+      },
+      { 
+        "id": 32, 
+        "cat": "ICE CREAM PLANE", 
+        "name": "Pineapple (पायनॅपल)", 
+        "price": "20/-", 
+        "desc": "Small: 20, Medium: 40, Cone: 30", 
+        "tags": ["Veg"], 
+        "img": "img/pineapple_plane.jpg",
+        "sizes": [
+          { "name": "Small", "price": 20 },
+          { "name": "Medium", "price": 40 },
+          { "name": "Cone", "price": 30 }
+        ]
+      },
+      { 
+        "id": 33, 
+        "cat": "ICE CREAM PLANE", 
+        "name": "Peru (पेरू)", 
+        "price": "20/-", 
+        "desc": "Small: 20, Medium: 40, Cone: 30", 
+        "tags": ["Veg"], 
+        "img": "img/peru_plane.jpg",
+        "sizes": [
+          { "name": "Small", "price": 20 },
+          { "name": "Medium", "price": 40 },
+          { "name": "Cone", "price": 30 }
+        ]
+      },
+      { 
+        "id": 34, 
+        "cat": "ICE CREAM PLANE", 
+        "name": "Gulkand (गुलकंद)", 
+        "price": "20/-", 
+        "desc": "Small: 20, Medium: 40", 
+        "tags": ["Veg"], 
+        "img": "img/gulkand.jpg",
+        "sizes": [
+          { "name": "Small", "price": 20 },
+          { "name": "Medium", "price": 40 }
+        ]
+      },
+      { 
+        "id": 35, 
+        "cat": "ICE CREAM PLANE", 
+        "name": "American Dryfruit (अमेरिकन ड्रायफ्रुट)", 
+        "price": "20/-", 
+        "desc": "Small: 20, Medium: 40", 
+        "tags": ["Veg"], 
+        "img": "img/american_dryfruit.jpg",
+        "sizes": [
+          { "name": "Small", "price": 20 },
+          { "name": "Medium", "price": 40 }
+        ]
+      },
+      { 
+        "id": 36, 
+        "cat": "ICE CREAM PLANE", 
+        "name": "Chocolate (चॉकलेट)", 
+        "price": "20/-", 
+        "desc": "Small: 20, Medium: 40, Cone: 30", 
+        "tags": ["Veg"], 
+        "img": "img/chocolate_plane.jpg",
+        "sizes": [
+          { "name": "Small", "price": 20 },
+          { "name": "Medium", "price": 40 },
+          { "name": "Cone", "price": 30 }
+        ]
+      },
+      // COOKIES
+      { 
+        "id": 37, 
+        "cat": "COOKIES", 
+        "name": "Gavrani Tupache Cookies (गवराणी तुपाचे कुकीज)", 
+        "price": "400/- per kg", 
+        "desc": "Traditional ghee cookies - With Dryfruit: 450/- per kg", 
+        "tags": ["Veg"], 
+        "img": "img/gavrani_tupache_cookies.jpg",
+        "sizes": [
+          { "name": "Regular (1kg)", "price": 400 },
+          { "name": "With Dryfruit (1kg)", "price": 450 }
+        ]
+      },
+      { 
+        "id": 38, 
+        "cat": "COOKIES", 
+        "name": "Kanik Buiscuit (कणिक बिस्किट)", 
+        "price": "160/- per kg", 
+        "desc": "Classic flour biscuits", 
+        "tags": ["Veg"], 
+        "img": "img/kanik_buiscuit.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 40 },
+          { "name": "500gm", "price": 80 },
+          { "name": "1kg", "price": 160 }
+        ]
+      },
+      { 
+        "id": 39, 
+        "cat": "COOKIES", 
+        "name": "Nagli Buiscuit (नागली बिस्किट)", 
+        "price": "200/- per kg", 
+        "desc": "Healthy ragi biscuits", 
+        "tags": ["Veg"], 
+        "img": "img/nagli_buiscuit.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 50 },
+          { "name": "500gm", "price": 100 },
+          { "name": "1kg", "price": 200 }
+        ]
+      },
+      { 
+        "id": 40, 
+        "cat": "COOKIES", 
+        "name": "Coconut Cookies (कोकोनट कुकीज)", 
+        "price": "200/- per kg", 
+        "desc": "Delicious coconut flavored cookies", 
+        "tags": ["Veg"], 
+        "img": "img/coconut_cookies.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 50 },
+          { "name": "500gm", "price": 100 },
+          { "name": "1kg", "price": 200 }
+        ]
+      },
+      { 
+        "id": 41, 
+        "cat": "COOKIES", 
+        "name": "Chocolate Cookies (चॉकलेट कुकीज)", 
+        "price": "260/- per kg", 
+        "desc": "Rich chocolate cookies", 
+        "tags": ["Veg"], 
+        "img": "img/chocolate_cookies.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 65 },
+          { "name": "500gm", "price": 130 },
+          { "name": "1kg", "price": 260 }
+        ]
+      },
+      { 
+        "id": 42, 
+        "cat": "COOKIES", 
+        "name": "Nutfruit Cookies (नटफ्रूट कुकीज)", 
+        "price": "280/- per kg", 
+        "desc": "Cookies with nuts and dry fruits", 
+        "tags": ["Veg"], 
+        "img": "img/nutfruit_cookies.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 70 },
+          { "name": "500gm", "price": 140 },
+          { "name": "1kg", "price": 280 }
+        ]
+      },
+      { 
+        "id": 43, 
+        "cat": "COOKIES", 
+        "name": "Basundi Cookies (बासुंदी कुकीज)", 
+        "price": "280/- per kg", 
+        "desc": "Basundi flavored sweet cookies", 
+        "tags": ["Veg"], 
+        "img": "img/basundi_cookies.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 70 },
+          { "name": "500gm", "price": 140 },
+          { "name": "1kg", "price": 280 }
+        ]
+      },
+      { 
+        "id": 44, 
+        "cat": "COOKIES", 
+        "name": "Honey Almond Cookies (हनी अल्मंड कुकीज)", 
+        "price": "280/- per kg", 
+        "desc": "Honey and almond cookies", 
+        "tags": ["Veg"], 
+        "img": "img/honey_almond_cookies.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 70 },
+          { "name": "500gm", "price": 140 },
+          { "name": "1kg", "price": 280 }
+        ]
+      },
+      // CAKES
+      { 
+        "id": 50, 
+        "cat": "CAKE", 
+        "name": "Black Forest Cake (ब्लैक फॉरेस्ट केक)", 
+        "price": "150/-", 
+        "desc": "Classic chocolate cake with cherry and cream", 
+        "tags": ["Veg"], 
+        "img": "img/black_forest_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 150 },
+          { "name": "500gm", "price": 250 },
+          { "name": "1Kg", "price": 500 }
+        ]
+      },
+      { 
+        "id": 51, 
+        "cat": "CAKE", 
+        "name": "Chocolate Cake (चॉकलेट केक)", 
+        "price": "150/-", 
+        "desc": "Rich and moist chocolate cake", 
+        "tags": ["Veg"], 
+        "img": "img/chocolate_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 150 },
+          { "name": "500gm", "price": 250 },
+          { "name": "1Kg", "price": 500 }
+        ]
+      },
+      { 
+        "id": 52, 
+        "cat": "CAKE", 
+        "name": "Pan Cake (पैन केक)", 
+        "price": "150/-", 
+        "desc": "Soft and fluffy pan cake", 
+        "tags": ["Veg"], 
+        "img": "img/pan_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 150 },
+          { "name": "500gm", "price": 250 },
+          { "name": "1Kg", "price": 500 }
+        ]
+      },
+      { 
+        "id": 53, 
+        "cat": "CAKE", 
+        "name": "Strawberry Cake (स्ट्रॉबेरी केक)", 
+        "price": "150/-", 
+        "desc": "Delicious strawberry flavored cake", 
+        "tags": ["Veg"], 
+        "img": "img/strawberry_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 150 },
+          { "name": "500gm", "price": 250 },
+          { "name": "1Kg", "price": 500 }
+        ]
+      },
+      { 
+        "id": 54, 
+        "cat": "CAKE", 
+        "name": "Pineapple Cake (पाइनएप्पल केक)", 
+        "price": "150/-", 
+        "desc": "Refreshing pineapple cake", 
+        "tags": ["Veg"], 
+        "img": "img/pineapple_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 150 },
+          { "name": "500gm", "price": 250 },
+          { "name": "1Kg", "price": 500 }
+        ]
+      },
+      { 
+        "id": 55, 
+        "cat": "CAKE", 
+        "name": "Butterscotch Cake (बटरस्कॉच केक)", 
+        "price": "150/-", 
+        "desc": "Crunchy butterscotch cake", 
+        "tags": ["Veg"], 
+        "img": "img/butterscotch_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 150 },
+          { "name": "500gm", "price": 250 },
+          { "name": "1Kg", "price": 500 }
+        ]
+      },
+      { 
+        "id": 56, 
+        "cat": "CAKE", 
+        "name": "Blueberry Cake (ब्लूबेरी केक)", 
+        "price": "150/-", 
+        "desc": "Tangy blueberry flavored cake", 
+        "tags": ["Veg"], 
+        "img": "img/blueberry_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 150 },
+          { "name": "500gm", "price": 250 },
+          { "name": "1Kg", "price": 500 }
+        ]
+      },
+      { 
+        "id": 57, 
+        "cat": "CAKE", 
+        "name": "Gulkand Badam Cake (गुलकंद बादाम केक)", 
+        "price": "150/-", 
+        "desc": "Unique gulkand and almond cake", 
+        "tags": ["Veg"], 
+        "img": "img/gulkand_badam_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 150 },
+          { "name": "500gm", "price": 250 },
+          { "name": "1Kg", "price": 500 }
+        ]
+      },
+      { 
+        "id": 58, 
+        "cat": "CAKE", 
+        "name": "Red Rose Cake (रेड रोज़ केक)", 
+        "price": "150/-", 
+        "desc": "Rose flavored red velvet cake", 
+        "tags": ["Veg"], 
+        "img": "img/red_rose_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 150 },
+          { "name": "500gm", "price": 250 },
+          { "name": "1Kg", "price": 500 }
+        ]
+      },
+      { 
+        "id": 59, 
+        "cat": "CAKE", 
+        "name": "White Forest Cake (व्हाइट फॉरेस्ट केक)", 
+        "price": "150/-", 
+        "desc": "Creamy white forest cake", 
+        "tags": ["Veg"], 
+        "img": "img/white_forest_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 150 },
+          { "name": "500gm", "price": 250 },
+          { "name": "1Kg", "price": 500 }
+        ]
+      },
+      { 
+        "id": 60, 
+        "cat": "CAKE", 
+        "name": "Kasata Cake (कसाटा केक)", 
+        "price": "150/-", 
+        "desc": "Delicious kasata cake", 
+        "tags": ["Veg"], 
+        "img": "img/kasata_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 150 },
+          { "name": "500gm", "price": 250 },
+          { "name": "1Kg", "price": 600 }
+        ]
+      },
+      { 
+        "id": 61, 
+        "cat": "CAKE", 
+        "name": "Red Velvet Cake (रेड वेल्वेट केक)", 
+        "price": "170/-", 
+        "desc": "Classic red velvet with cream cheese", 
+        "tags": ["Veg"], 
+        "img": "img/red_velvet_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 170 },
+          { "name": "500gm", "price": 300 },
+          { "name": "1Kg", "price": 600 }
+        ]
+      },
+      { 
+        "id": 62, 
+        "cat": "CAKE", 
+        "name": "Green Velvet Cake (ग्रीन वेल्वेट केक)", 
+        "price": "170/-", 
+        "desc": "Green colored velvet cake", 
+        "tags": ["Veg"], 
+        "img": "img/green_velvet_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 170 },
+          { "name": "500gm", "price": 300 },
+          { "name": "1Kg", "price": 600 }
+        ]
+      },
+      { 
+        "id": 63, 
+        "cat": "CAKE", 
+        "name": "Chocolate Truffle Cake (चॉकलेट ट्रफल केक)", 
+        "price": "200/-", 
+        "desc": "Rich chocolate truffle cake", 
+        "tags": ["Veg"], 
+        "img": "img/chocolate_truffle_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 200 },
+          { "name": "500gm", "price": 350 },
+          { "name": "1Kg", "price": 700 }
+        ]
+      },
+      { 
+        "id": 64, 
+        "cat": "CAKE", 
+        "name": "Mawa Malai Cake (मावा मलाई केक)", 
+        "price": "200/-", 
+        "desc": "Traditional mawa malai flavored cake", 
+        "tags": ["Veg"], 
+        "img": "img/mawa_malai_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 200 },
+          { "name": "500gm", "price": 350 },
+          { "name": "1Kg", "price": 700 }
+        ]
+      },
+      { 
+        "id": 65, 
+        "cat": "CAKE", 
+        "name": "Rasmalai Cake (रसमलाई केक)", 
+        "price": "200/-", 
+        "desc": "Rasmalai flavored creamy cake", 
+        "tags": ["Veg"], 
+        "img": "img/rasmalai_cake.jpg",
+        "sizes": [
+          { "name": "250gm", "price": 200 },
+          { "name": "500gm", "price": 350 },
+          { "name": "1Kg", "price": 700 }
+        ]
+      }
+    ];
         
         // Cart functionality    
         let cart = [];
@@ -1429,6 +1967,9 @@
         const whatsappOrder = document.getElementById('whatsappOrder');
         const addAnotherItem = document.getElementById('addAnotherItem');
         const customerDetailsSummary = document.getElementById('customerDetailsSummary');
+
+        // Store current selected sizes for each item
+        const selectedSizes = {};
 
         // Delivery option selection
         function selectDeliveryOption(type) {
@@ -1512,19 +2053,54 @@
             cartModal.classList.remove('open');
         });
 
-        // Add to cart function with animation
-        function addToCart(item, button) {
-            const existingItem = cart.find(cartItem => cartItem.id === item.id);
+        // Select size function
+        function selectSize(itemId, sizeName, price) {
+            selectedSizes[itemId] = { name: sizeName, price: price };
+            
+            // Update UI
+            const sizeBtns = document.querySelectorAll(`.size-btn[data-item-id="${itemId}"]`);
+            sizeBtns.forEach(btn => {
+                if (btn.dataset.size === sizeName) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Update price display
+            const priceElement = document.getElementById(`price-${itemId}`);
+            if (priceElement) {
+                priceElement.textContent = `₹${price}`;
+            }
+        }
 
-            if (existingItem) {
-                existingItem.quantity += 1;
+        // Add to cart function with size
+        function addToCartWithSize(item, button) {
+            // Check if size is selected
+            const selectedSize = selectedSizes[item.id];
+            
+            if (!selectedSize && item.sizes && item.sizes.length > 0) {
+                alert('Please select a size first!');
+                return;
+            }
+
+            const itemWithSize = {
+                id: item.id,
+                name: item.name,
+                size: selectedSize ? selectedSize.name : null,
+                price: selectedSize ? selectedSize.price : (parseInt(item.price.replace('₹', '').replace('/-', '')) || 0),
+                quantity: 1
+            };
+
+            // Check if same item with same size exists
+            const existingItemIndex = cart.findIndex(cartItem => 
+                cartItem.id === item.id && cartItem.size === itemWithSize.size
+            );
+
+            if (existingItemIndex !== -1) {
+                cart[existingItemIndex].quantity += 1;
             } else {
-                cart.push({
-                    id: item.id,
-                    name: item.name,
-                    price: item.price,
-                    quantity: 1
-                });
+                cart.push(itemWithSize);
             }
 
             updateCart();
@@ -1546,20 +2122,18 @@
         }
 
         // Remove from cart function
-        function removeFromCart(itemId) {
-            cart = cart.filter(item => item.id !== itemId);
+        function removeFromCart(index) {
+            cart.splice(index, 1);
             updateCart();
         }
 
         // Update quantity function
-        function updateQuantity(itemId, change) {
-            const item = cart.find(item => item.id === itemId);
+        function updateQuantity(index, change) {
+            if (cart[index]) {
+                cart[index].quantity += change;
 
-            if (item) {
-                item.quantity += change;
-
-                if (item.quantity <= 0) {
-                    removeFromCart(itemId);
+                if (cart[index].quantity <= 0) {
+                    removeFromCart(index);
                 } else {
                     updateCart();
                 }
@@ -1582,22 +2156,22 @@
                 let itemsHTML = '';
                 let totalAmount = 0;
 
-                cart.forEach(item => {
-                    const price = parseInt(item.price.replace('₹', ''));
-                    const itemTotal = price * item.quantity;
+                cart.forEach((item, index) => {
+                    const itemTotal = item.price * item.quantity;
                     totalAmount += itemTotal;
 
                     itemsHTML += `
             <div class="cart-item">
               <div class="item-info">
                 <div class="item-name">${item.name}</div>
-                <div class="item-price">${item.price}</div>
+                ${item.size ? `<div class="item-size">Size: ${item.size}</div>` : ''}
+                <div class="item-price">₹${item.price}</div>
               </div>
               <div class="item-quantity">
-                <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
+                <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
                 <span class="quantity">${item.quantity}</span>
-                <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
-                <button class="remove-item" onclick="removeFromCart(${item.id})">×</button>
+                <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                <button class="remove-item" onclick="removeFromCart(${index})">×</button>
               </div>
             </div>
           `;
@@ -1670,31 +2244,34 @@
             if (deliveryType === 'restaurant') {
                 const tableNumber = document.getElementById('tableNumber').value.trim();
 
-                message += `**Delivery Type:** Dine-in\n`;
-                message += `**Table Number:** ${tableNumber}\n\n`;
+                message += `*Delivery Type:* Dine-in\n`;
+                message += `*Table Number:* ${tableNumber}\n\n`;
             } else {
                 const customerName = document.getElementById('customerName').value.trim();
                 const customerMobile = document.getElementById('customerMobile').value.trim();
                 const customerAddress = document.getElementById('customerAddress').value.trim();
 
-                message += `**Delivery Type:** Home Delivery\n`;
-                message += `**Name:** ${customerName}\n`;
-                message += `**Mobile:** ${customerMobile}\n`;
-                message += `**Address:** ${customerAddress}\n\n`;
+                message += `*Delivery Type:* Home Delivery\n`;
+                message += `*Name:* ${customerName}\n`;
+                message += `*Mobile:* ${customerMobile}\n`;
+                message += `*Address:* ${customerAddress}\n\n`;
             }
 
-            message += `**Order Details:**\n`;
+            message += `*Order Details:*\n`;
 
             cart.forEach(item => {
-                message += `• ${item.name} - ${item.quantity} x ${item.price}\n`;
+                if (item.size) {
+                    message += `• ${item.name} (${item.size}) - ${item.quantity} x ₹${item.price}\n`;
+                } else {
+                    message += `• ${item.name} - ${item.quantity} x ₹${item.price}\n`;
+                }
             });
 
             const totalAmount = cart.reduce((sum, item) => {
-                const price = parseInt(item.price.replace('₹', ''));
-                return sum + (price * item.quantity);
+                return sum + (item.price * item.quantity);
             }, 0);
 
-            message += `\n**Total Amount:** ₹${totalAmount}\n\n`;
+            message += `\n*Total Amount:* ₹${totalAmount}\n\n`;
             message += `Thank you!`;
 
             // Encode the message for WhatsApp URL
@@ -1710,7 +2287,7 @@
             }, 1000);
         });
 
-        // Render menu items
+        // Render menu items with size selector
         function renderMenuItems(items) {
             const menuGrid = document.getElementById('menuGrid');
 
@@ -1719,26 +2296,51 @@
                 return;
             }
 
-            menuGrid.innerHTML = items.map(item => `
-        <div class="card" data-cat="${item.cat}">
-          <div class="card-header">
-            <div class="thumb">
-              <img src="${item.img}" alt="${item.name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiBmaWxsPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDMpIi8+CjxwYXRoIGQ9Ik03MCA4MEgxMTBNODAgNzBWOTBNNjUgOTVIMTA1TTk1IDY1VjEwNU02NSA2NVYxMDVNNzUgNzVIOThNNzUgODVIOThNNzUgOTVIOThNNzUgMTA1SDk4TTY1IDc1SDcyTTY1IDg1SDcyTTY1IDk1SDcyTTY1IDEwNUg3Mk0xMDggNzVIMTE1TTEwOCA4NUgxMTVNMTA4IDk1SDExNU0xMDggMTA1SDExNSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+'">
-            </div>
-            <div class="card-info">
-              <h3 class="dish">${item.name}</h3>
-              <p class="desc">${item.desc}</p>
-              <div class="tags">
-                ${item.tags.map(tag => `<span class="pill">${tag}</span>`).join('')}
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <div class="price">${item.price}</div>
-            <button class="btn-primary" onclick="addToCart(${JSON.stringify(item).replace(/"/g, '&quot;')}, this)">Add to Cart</button>
-          </div>
-        </div>
-      `).join('');
+            menuGrid.innerHTML = items.map(item => {
+                // Initialize selected size if not exists
+                if (!selectedSizes[item.id] && item.sizes && item.sizes.length > 0) {
+                    selectedSizes[item.id] = item.sizes[0];
+                }
+
+                const currentSize = selectedSizes[item.id] || (item.sizes && item.sizes[0]);
+                const currentPrice = currentSize ? currentSize.price : (parseInt(item.price.replace('₹', '').replace('/-', '')) || 0);
+
+                // Generate size buttons HTML
+                const sizeButtonsHTML = item.sizes ? item.sizes.map(size => `
+                    <button class="size-btn ${selectedSizes[item.id] && selectedSizes[item.id].name === size.name ? 'active' : ''}" 
+                            data-item-id="${item.id}" 
+                            data-size="${size.name}"
+                            onclick="selectSize(${item.id}, '${size.name}', ${size.price})">
+                        ${size.name}
+                    </button>
+                `).join('') : '';
+
+                return `
+                    <div class="card" data-cat="${item.cat}">
+                        <div class="card-header">
+                            <div class="thumb">
+                                <img src="${item.img}" alt="${item.name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiBmaWxsPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDMpIi8+CjxwYXRoIGQ9Ik03MCA4MEgxMTBNODAgNzBWOTBNNjUgOTVIMTA1TTk1IDY1VjEwNU02NSA2NVYxMDVNNzUgNzVIOThNNzUgODVIOThNNzUgOTVIOThNNzUgMTA1SDk4TTY1IDc1SDcyTTY1IDg1SDcyTTY1IDk1SDcyTTY1IDEwNUg3Mk0xMDggNzVIMTE1TTEwOCA4NUgxMTVNMTA4IDk1SDExNU0xMDggMTA1SDExNSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+'">
+                            </div>
+                            <div class="card-info">
+                                <h3 class="dish">${item.name}</h3>
+                                <p class="desc">${item.desc}</p>
+                                <div class="tags">
+                                    ${item.tags.map(tag => `<span class="pill">${tag}</span>`).join('')}
+                                </div>
+                                ${item.sizes ? `
+                                    <div class="size-selector">
+                                        ${sizeButtonsHTML}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price" id="price-${item.id}">₹${currentPrice}</div>
+                            <button class="btn-primary" onclick="addToCartWithSize(${JSON.stringify(item).replace(/"/g, '&quot;')}, this)">Add to Cart</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
         }
 
         // Filter menu items by category
@@ -1791,7 +2393,8 @@
         });
 
         // Make functions available globally
-        window.addToCart = addToCart;
+        window.selectSize = selectSize;
+        window.addToCartWithSize = addToCartWithSize;
         window.removeFromCart = removeFromCart;
         window.updateQuantity = updateQuantity;
         window.selectDeliveryOption = selectDeliveryOption;
